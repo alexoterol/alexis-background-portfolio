@@ -1,0 +1,19 @@
+.space-aesthetic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;  
+    padding: 1rem 0; 
+}
+
+.space-aesthetic-image {
+    max-height: 50px;
+    height: auto;
+    opacity: 0.8;  /* Añade un toque estético */
+    transition: opacity 0.3s ease;
+}
+
+.space-aesthetic-image:hover {
+    opacity: 1;  /* Al pasar el ratón, la imagen se vuelve más visible */
+}

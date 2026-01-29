@@ -1,0 +1,31 @@
+.separator {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* O usa var(--padding-m) */
+}
+
+.line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: var(--color-fg, #fff);
+}
+
+.separator-svg {
+    height: 100%;
+}
+
+.path-outline {
+    fill: none;
+    stroke: var(--color-fg, #fff);
+    stroke-width: 14.7769;
+}
+
+.path-fill {
+    fill: var(--color-fg, #fff);
+}
+
+.separator-margin {
+    height: 1.5rem; /* O usa var(--padding-m) */
+}

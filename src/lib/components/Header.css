@@ -1,0 +1,88 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(var(--header-height) + var(--spacing));
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--color-bg);
+  border-bottom: var(--border-width) solid var(--color-accent);
+  padding: var(--padding-m) var(--padding-main-x);
+  padding-top: calc(var(--spacing) + 1rem);
+
+  z-index: 1000;
+}
+
+.titlebar {
+  background: linear-gradient(transparent, var(--color-accent)) center
+    no-repeat;
+  background-position: 0px 100px;
+  border-bottom: var(--border-width) solid transparent;
+  border-top: var(--border-width) solid transparent;
+  text-decoration: none;
+  transition: .2s cubic-bezier(0,1.8,1,-1.51);
+}
+.titlebar:hover {
+  background-position: 0px 7px;
+  border-bottom: var(--border-width) solid var(--color-accent);
+}
+
+.titlebar,
+.social {
+  display: flex;
+  align-items: center;
+  gap: var(--padding-m);
+}
+.titlebar,
+.titlebar-image {
+  height: 100%;
+}
+
+.social-copland {
+  height: 2rem;
+}
+
+.social-link {
+  display: grid;
+  place-content: center;
+  height: 1.5em;
+  width: 2em;
+}
+.social-link-color {
+  fill: var(--color-border);
+}
+.social a:hover .social-link-color {
+  fill: var(--color-accent);
+}
+
+.lang-selector {
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  border-radius: 8px 8px 0 0;
+  color: var(--color-accent);
+  font-weight: bold;
+  padding: 0.5rem;
+  font-family: "departure-mono", sans-serif;
+  cursor: pointer;
+  transition: 0.3s background-color ease;
+}
+
+.lang-selector:hover {
+  background-color: var(--color-accent); 
+  color: var(--color-dark);
+  border-color: var(--color-accent);
+}
+
+.lang-selector:focus {
+  border-radius: 8px 8px 0 0;
+  outline: none;
+  box-shadow: 0 0 5px var(--color-accent);
+}
+
+.lang-selector > option {
+  color: var(--color-dark)
+}

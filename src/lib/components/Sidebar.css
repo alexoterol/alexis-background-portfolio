@@ -1,0 +1,104 @@
+/* SIDEBAR */
+.container {
+    width: 100%;
+    position: fixed;
+    top: calc(100dvh - var(--button-height) - clamp(3.5rem, 2.6vw, 7rem));
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--padding-main-x);
+    pointer-events: none;
+    transition: 0s;
+    z-index: 100;
+}
+
+.container * {
+    pointer-events: all;
+}
+
+.container.container--open {
+    top: auto;
+    bottom: 4rem;
+    filter: drop-shadow(0px 0px 20px #000000);
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* SIDEBAR LINKS */
+.container__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: var(--color-bg);
+    border: var(--border-width) solid var(--color-border);
+    opacity: 0;
+    padding: var(--padding-s);
+    transition: opacity 0s;
+}
+
+.container--open .container__content {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.sidebar-title {
+    height: calc(var(--button-height) - (var(--padding-s) * 2) - (var(--border-width) * 2));
+    display: flex;
+    align-items: center;
+    padding: var(--text-padding-v) var(--text-padding-h);
+}
+
+.sidebar-title__separator {
+    height: var(--border-width);
+    width: 100%;
+    margin: var(--padding-s) 0;
+    background-color: var(--color-border);
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-s);
+    background: linear-gradient(transparent, var(--color-accent)) center no-repeat;
+    background-position: 0px 100px;
+    border-bottom: var(--border-width) solid transparent;
+    padding: var(--text-padding-h) var(--padding-s);
+    text-decoration: none;
+}
+
+.sidebar-link:hover {
+    background-position: 0px 20px;
+    border-bottom: var(--border-width) solid var(--color-accent);
+}
+
+.sidebar-link-icon {
+    fill: var(--color-fg);
+    height: 1em;
+}
+
+.container__switch {
+    height: var(--button-height);
+    width: var(--button-width);
+    background: var(--color-bg);
+    border: var(--border-width) solid var(--color-border);
+    padding: var(--padding-s);
+    margin-left: auto;
+}
+
+.switch-open p {
+    transform: rotate(180deg);
+}
+
+.container--open .container__switch {
+    border-bottom-width: 0px;
+}
+
+.switch-open .container__switch__icon {
+    transform: rotate(90deg);
+}
+
+.container__switch__icon {
+    width: 1.5rem;
+    fill: var(--color-fg);
+}
