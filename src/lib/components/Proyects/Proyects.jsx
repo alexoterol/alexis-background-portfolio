@@ -2,7 +2,6 @@ import React from 'react';
 
 // import './AboutMe.css';
 import Separator from '../Separator';
-import AboutSelector from './AboutSelector'
 import imgRectangular from '../../assets/images/ref_rectangle.jpg';
 
 function AboutMe() {
@@ -10,7 +9,7 @@ function AboutMe() {
 
     return (
         <main className="about-me-content">
-            <h1 className="main-title">About me</h1>
+            <h1 className="main-title">Proyects</h1>
             <Separator margin={true} />
             <div className="content-grid">
                 <div className="metadata-character">
@@ -26,7 +25,6 @@ function AboutMe() {
                         <p>Nick</p><p>:</p><p>Arekusu</p>
                     </div>
                 </div>
-                <AboutSelector /> 
             </div>
         </main>
     );

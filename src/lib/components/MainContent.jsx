@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './MainContent.css';
 import SpaceAesthetic from './SpaceAesthetic';
 import Separator from './Separator';
@@ -8,7 +9,7 @@ import CardContainer from './CardContainer';
 import imgCuadrada from '../assets/images/ref_square.jpg';
 import imgRectangular from '../assets/images/ref_rectangle.jpg';
 
-function MainContent() {
+function MainContent({ onNavigate }) {
     const imageNames = [
         'GOW_logo.png',
         'Akira_logo.png',
@@ -38,10 +39,12 @@ function MainContent() {
                     <div className='slow-separator'>
                         <p className='slow-text'>IT IS A SL_________OW TYPE OF ART</p>
                     </div>
-                    <CardContainer/>
+                    <CardContainer onNavigate={onNavigate} />
                 </main>
             </div>
     );
 }
-
+MainContent.propTypes = {
+    onNavigate: PropTypes.func.isRequired,
+};
 export default MainContent;
