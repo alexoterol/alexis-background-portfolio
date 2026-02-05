@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './Sidebar.css';
 
-function Sidebar() {
+function Sidebar({ onNavigate }) {
     const [isOpen, setIsOpen] = useState(false);
+
+    const handleLinkClick = (e, view) => {
+        e.preventDefault(); // Prevenir navegación por defecto
+        onNavigate(view);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setIsOpen(false); // Cerrar sidebar después de navegar (opcional)
+    };
 
     return (
         <div className={`container ${isOpen ? 'container--open' : ''}`} id="sidebar">
@@ -29,7 +37,11 @@ function Sidebar() {
 
                 <div className="sidebar-title__separator"></div>
 
-                <a className="sidebar-link" href="/about">
+                <a 
+                    className="sidebar-link" 
+                    href="/about"
+                    onClick={(e) => handleLinkClick(e, 'about')}
+                >
                     <svg
                         className="sidebar-link-icon"
                         viewBox="0 0 16 16"
@@ -43,7 +55,11 @@ function Sidebar() {
                     <p>About</p>
                 </a>
 
-                <a className="sidebar-link" href="/projects">
+                <a 
+                    className="sidebar-link" 
+                    href="/projects"
+                    onClick={(e) => handleLinkClick(e, 'projects')}
+                >
                     <svg
                         className="sidebar-link-icon"
                         viewBox="0 0 16 16"
@@ -57,7 +73,11 @@ function Sidebar() {
                     <p>Projects</p>
                 </a>
 
-                <a className="sidebar-link" href="/contact">
+                <a 
+                    className="sidebar-link" 
+                    href="/contact"
+                    onClick={(e) => handleLinkClick(e, 'contact')}
+                >
                     <svg
                         className="sidebar-link-icon"
                         viewBox="0 0 16 16"
@@ -69,9 +89,82 @@ function Sidebar() {
                     </svg>
                     <p>Contact</p>
                 </a>
+
+                {/* Agregar más links según necesites */}
+                <a 
+                    className="sidebar-link" 
+                    href="/tools"
+                    onClick={(e) => handleLinkClick(e, 'tools')}
+                >
+                    <svg
+                        className="sidebar-link-icon"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M15.45 1.38l-.8-.8c-.73-.73-1.92-.73-2.65 0L10.38 2.2 13.8 5.62l1.65-1.62c.73-.73.73-1.92 0-2.65zM1 11.48l-.75 4.27 4.27-.75L14.25 5.27 10.73 1.75 1 11.48z"
+                        />
+                    </svg>
+                    <p>Tools</p>
+                </a>
+
+                <a 
+                    className="sidebar-link" 
+                    href="/apps"
+                    onClick={(e) => handleLinkClick(e, 'apps')}
+                >
+                    <svg
+                        className="sidebar-link-icon"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M0 0h7v7H0V0zm9 0h7v7H9V0zM0 9h7v7H0V9zm9 0h7v7H9V9z"
+                        />
+                    </svg>
+                    <p>Apps</p>
+                </a>
+
+                <a 
+                    className="sidebar-link" 
+                    href="/inventory"
+                    onClick={(e) => handleLinkClick(e, 'inventory')}
+                >
+                    <svg
+                        className="sidebar-link-icon"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M2 2h4v4H2V2zm6 0h4v4H8V2zm6 0h4v4h-4V2zM2 8h4v4H2V8zm6 0h4v4H8V8zm6 0h4v4h-4V8zM2 14h4v2H2v-2zm6 0h4v2H8v-2zm6 0h4v2h-4v-2z"
+                        />
+                    </svg>
+                    <p>Inventory</p>
+                </a>
+
+                <a 
+                    className="sidebar-link" 
+                    href="/workspace"
+                    onClick={(e) => handleLinkClick(e, 'workspace')}
+                >
+                    <svg
+                        className="sidebar-link-icon"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M1 1h14v9H1V1zm0 11h14v3H1v-3z"
+                        />
+                    </svg>
+                    <p>Workspace</p>
+                </a>
             </article>
         </div>
     );
 }
+
+Sidebar.propTypes = {
+    onNavigate: PropTypes.func.isRequired,
+};
 
 export default Sidebar;

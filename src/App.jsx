@@ -3,7 +3,8 @@ import './App.css';
 import Header from './lib/components/Header';
 import MainContent from './lib/components/MainContent';
 import AboutMe from './lib/components/About Me/AboutMe';
-import Proyects from './lib/components/Proyects/Proyects';
+import Projects from './lib/components/Project/Projects';
+import Contact from './lib/components/Contact/Contact';
 import Sidebar from './lib/components/Sidebar';
 
 
@@ -16,9 +17,10 @@ function App() {
         return <MainContent onNavigate={setCurrentView} />;
       case 'about':
         return <AboutMe onNavigate={setCurrentView} />;
-      // Aquí puedes agregar más casos para Projects, Contact, etc.
-      case 'contact':
-        return <Proyects onNavigate={setCurrentView} />
+      case 'projects':
+        return <Projects onNavigate={setCurrentView} />
+        case 'contact':
+        return <Contact onNavigate={setCurrentView} />
       default:
         return <MainContent onNavigate={setCurrentView} />;
     }
