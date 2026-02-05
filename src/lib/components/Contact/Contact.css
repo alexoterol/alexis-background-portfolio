@@ -1,222 +1,33 @@
 .contact-container {
     display: flex;
     flex-direction: column;
-    gap: var(--padding-xl, 2rem);
     align-items: center;
-    min-height: 400px;
+    width: auto;
 }
 
-.contact-container .content-title {
-    font-family: var(--font-main, 'Press Start 2P', cursive);
-    font-size: 1.5rem;
-    color: var(--color-accent, #ff6b6b);
-    margin-bottom: var(--padding-m, 1rem);
-    align-self: center;
-}
-
-/* Separador decorativo del título */
-.contact-title-divider {
-    width: 100%;
-    max-width: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--padding-m, 1rem);
-    margin-bottom: var(--padding-xl, 2rem);
-}
-
-.contact-title-divider::before,
-.contact-title-divider::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(
-        to right,
-        transparent,
-        var(--color-accent, #888) 20%,
-        var(--color-accent, #888) 80%,
-        transparent
-    );
-}
-
-.contact-title-divider-icon {
-    width: 0.75rem;
-    height: 0.75rem;
-    background: var(--color-accent, #888);
-    transform: rotate(45deg);
-    flex-shrink: 0;
-}
-
-/* Grid de métodos de contacto */
-.contact-methods {
+.contact-methods-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--padding-l, 1.5rem);
-    width: 100%;
-    max-width: 700px;
+    width: auto;
+    max-width: 1200px;
     padding: 0 var(--padding-m, 1rem);
 }
 
-/* Tarjeta de método de contacto */
-.contact-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--padding-s, 0.5rem);
-    padding: var(--padding-l, 1.5rem) var(--padding-m, 1rem);
-    background: rgba(255, 255, 255, 0.03);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.05) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.contact-card:hover {
-    border-color: var(--color-accent, #ff6b6b);
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-.contact-card:hover::before {
-    opacity: 1;
-}
-
-/* Icono del método de contacto */
-.contact-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    margin-bottom: var(--padding-xs, 0.3rem);
-    transition: transform 0.3s ease;
-}
-
-.contact-card:hover .contact-icon {
-    transform: scale(1.1);
-}
-
-.contact-icon img,
-.contact-icon svg {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* Texto del método de contacto */
-.contact-label {
-    font-family: var(--font-mono, 'Courier New', monospace);
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: var(--color-text, #fff);
-    text-align: center;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
-}
-
-.contact-card:hover .contact-label {
-    color: var(--color-accent, #ff6b6b);
-}
-
-.contact-handle {
-    font-family: var(--font-mono, 'Courier New', monospace);
-    font-size: 0.75rem;
-    color: var(--color-text-secondary, #aaa);
-    text-align: center;
-    letter-spacing: 0.3px;
-}
-
-/* Indicador de favorito/destacado */
-.contact-card.featured {
-    border-color: rgba(255, 215, 0, 0.3);
-}
-
-.contact-card.featured::after {
-    content: '⭐';
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    font-size: 1.5rem;
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(10deg); }
-}
-
-/* Colores específicos para cada plataforma */
-.contact-card.email .contact-icon {
-    color: #ea4335;
-}
-
-.contact-card.signal .contact-icon {
-    color: #3a76f0;
-}
-
-.contact-card.discord .contact-icon {
-    color: #5865f2;
-}
-
-.contact-card.twitter .contact-icon {
-    color: #1da1f2;
-}
-
-.contact-card.github .contact-icon {
-    color: #ffffff;
-}
-
-/* ============================================
-   RESPONSIVE
-   ============================================ */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .contact-methods {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--padding-m, 1rem);
-    }
-    
-    .contact-icon {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1.8rem;
-    }
-    
-    .contact-label {
-        font-size: 0.85rem;
-    }
-    
-    .contact-handle {
-        font-size: 0.7rem;
+    .contact-methods-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
     }
 }
 
 @media (max-width: 480px) {
-    .contact-container .content-title {
+    .contact-container .main-title {
         font-size: 1.2rem;
     }
     
-    .contact-methods {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-    }
-    
-    .contact-card {
-        padding: var(--padding-m, 1rem);
+    .contact-methods-grid {
+        gap: var(--padding-m, 1rem);
     }
 }

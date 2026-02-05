@@ -1,7 +1,8 @@
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: var(--padding-m);
+  gap: var(--padding-m, 1rem);
+
   padding: 2rem;
   justify-items: center;
   
@@ -9,19 +10,23 @@
 }
 
 .card {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-dark);
-  border: 2px solid var(--color-border);
-  border-radius: 8px;
+  background-color: transparent;
+  border: 3px solid var(--color-fg);
   padding: 1rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   width: 100%; 
   min-width: 150px;
+}
+
+.card-label{
+  font-size: xx-large;
 }
 
 .card:hover {
@@ -36,7 +41,7 @@
 }
 
 .card-text {
-  font-size: 1rem;
+  font-size: 3rem;
   font-family: "vergilia", sans-serif;
   color: var(--color-fg);
   font-weight: bold;

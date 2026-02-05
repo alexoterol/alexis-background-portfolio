@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './CardContainer.css';
-import aboutMeIcon from '../assets/images/CardImages/aboutMe.svg';
-import projectsIcon from '../assets/images/CardImages/aboutMe.svg';
-import contactIcon from '../assets/images/CardImages/aboutMe.svg';
-import donateIcon from '../assets/images/CardImages/aboutMe.svg';
-import discordIcon from '../assets/images/CardImages/aboutMe.svg';
-import youtubeIcon from '../assets/images/CardImages/aboutMe.svg';
+import aboutMeIcon from '/src/lib/assets/images/CardImages/aboutMe.svg';
+import projectsIcon from '/src/lib/assets/images/CardImages/aboutMe.svg';
+import contactIcon from '/src/lib/assets/images/CardImages/aboutMe.svg';
+import donateIcon from '/src/lib/assets/images/CardImages/aboutMe.svg';
+import discordIcon from '/src/lib/assets/images/CardImages/aboutMe.svg';
+import youtubeIcon from '/src/lib/assets/images/CardImages/aboutMe.svg';
 
 function CardContainer({ onNavigate }) {
     const cards = [

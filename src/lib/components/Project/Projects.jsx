@@ -1,88 +1,58 @@
 import React from 'react';
 import './Projects.css';
 import Separator from '../Separator';
+import ProjectCard from './ProjectCard';
+
+import rubiusImg from '/src/lib/assets/images/projects/copland.webp';
+import archanImg from '/src/lib/assets/images/projects/copland.webp';
+import starmcImg from '/src/lib/assets/images/projects/copland.webp';
+import dndImg from '/src/lib/assets/images/projects/copland.webp';
 
 function Projects() {
+    const projects = [
+        {
+            name: 'Rubiu5',
+            description: 'The discord bot for Rubius Army',
+            img: rubiusImg,
+            tags: ['TypeScript', 'Docker', 'MongoDB']
+        },
+        {
+            name: 'Archan',
+            description: 'A fast and configurable discord bot',
+            img: archanImg,
+            tags: ['TypeScript', 'Docker', 'Redis']
+        },
+        {
+            name: 'StarMC',
+            description: 'Minecraft launcher built on Tauri',
+            img: starmcImg,
+            tags: ['Rust', 'React']
+        },
+        {
+            name: 'DnD Abenyu',
+            description: 'A DnD helper server built in Rust',
+            img: dndImg,
+            tags: ['Rust', 'Svelte', 'SQLite']
+        }
+    ];
+
     return (
         <div className="app-container">
             <main className="about-me-content">
                 <div className="projects-container">
-                    <h2 className="content-title">Projects</h2>
+                    <h1 className="main-title">Projects</h1>
+                    <Separator margin={false} />
                     
-                    <Separator margin={false}/>
-                    
-                    {/* Lista de proyectos */}
                     <div className="projects-list">
-                        {/* Proyecto 1 */}
-                        <div className="project-card">
-                            <div className="project-image">
-                                <img src="/path/to/rubius-avatar.png" alt="Rubiu5" />
-                            </div>
-                            <div className="project-content">
-                                <h3 className="project-title">Rubiu5</h3>
-                                <p className="project-description">
-                                    The discord bot for Rubius Army
-                                </p>
-                                <div className="project-tags">
-                                    <span className="project-tag typescript">TypeScript</span>
-                                    <span className="project-tag docker">Docker</span>
-                                    <span className="project-tag mongodb">MongoDB</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Proyecto 2 */}
-                        <div className="project-card">
-                            <div className="project-image">
-                                <img src="/path/to/archan-avatar.png" alt="Archan" />
-                            </div>
-                            <div className="project-content">
-                                <h3 className="project-title">Archan</h3>
-                                <p className="project-description">
-                                    A fast and configurable discord bot
-                                </p>
-                                <div className="project-tags">
-                                    <span className="project-tag typescript">TypeScript</span>
-                                    <span className="project-tag docker">Docker</span>
-                                    <span className="project-tag redis">Redis</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Proyecto 3 */}
-                        <div className="project-card">
-                            <div className="project-image">
-                                <img src="/path/to/starmc-logo.png" alt="StarMC" />
-                            </div>
-                            <div className="project-content">
-                                <h3 className="project-title">StarMC</h3>
-                                <p className="project-description">
-                                    Minecraft launcher built on Tauri
-                                </p>
-                                <div className="project-tags">
-                                    <span className="project-tag rust">Rust</span>
-                                    <span className="project-tag react">React</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Proyecto 4 */}
-                        <div className="project-card">
-                            <div className="project-image">
-                                <img src="/path/to/dnd-abenyu-logo.png" alt="DnD Abenyu" />
-                            </div>
-                            <div className="project-content">
-                                <h3 className="project-title">DnD Abenyu</h3>
-                                <p className="project-description">
-                                    A DnD helper server built in Rust
-                                </p>
-                                <div className="project-tags">
-                                    <span className="project-tag rust">Rust</span>
-                                    <span className="project-tag svelte">Svelte</span>
-                                    <span className="project-tag sqlite">SQLite</span>
-                                </div>
-                            </div>
-                        </div>
+                        {projects.map((project, index) => (
+                            <ProjectCard
+                                key={index}
+                                name={project.name}
+                                description={project.description}
+                                img={project.img}
+                                tags={project.tags}
+                            />
+                        ))}
                     </div>
                 </div>
             </main>

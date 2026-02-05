@@ -17,3 +17,9 @@
 .space-aesthetic-image:hover {
     opacity: 1;  /* Al pasar el ratón, la imagen se vuelve más visible */
 }
+
+@media screen and (max-width: 728px) {
+    .space-aesthetic{
+        display: none;
+    }
+}

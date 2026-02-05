@@ -16,15 +16,37 @@ function AboutMe() {
                 <div className="content-grid-about-me">
                     <div className="metadata-character-about-me">
                         <img src={imgRectangular} alt="Rectangular" className="img-rect-about-me" />
-                        <Separator margin={true} />
-                        <div >
-                            <p>Nick</p><p>:</p><p>Arekusu</p>
-                        </div>
-                        <div>
-                            <p>Nick</p><p>:</p><p>Arekusu</p>
-                        </div>
-                        <div>
-                            <p>Nick</p><p>:</p><p>Arekusu</p>
+                        <Separator margin={false} />
+                        <div className="character-stats">
+                            <div className="stat-row">
+                                <p className="stat-label">Nick</p>
+                                <p className="stat-colon">:</p>
+                                <p className="stat-value">アレックス</p>
+                            </div>
+                            
+                            <div className="stat-row">
+                                <p className="stat-label">Level</p>
+                                <p className="stat-colon">:</p>
+                                <p className="stat-value">20</p>
+                            </div>
+                            
+                            <div className="stat-row">
+                                <p className="stat-label">HP</p>
+                                <p className="stat-colon">:</p>
+                                <p className="stat-value">???</p>
+                            </div>
+                            
+                            <div className="stat-row">
+                                <p className="stat-label">Mana</p>
+                                <p className="stat-colon">:</p>
+                                <p className="stat-value">???</p>
+                            </div>
+                            
+                            <div className="stat-row">
+                                <p className="stat-label">Rank</p>
+                                <p className="stat-colon">:</p>
+                                <p className="stat-value">B2</p>
+                            </div>
                         </div>
                     </div>
                     <AboutSelector /> 

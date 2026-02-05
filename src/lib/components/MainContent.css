@@ -58,7 +58,7 @@
     border-radius: 8px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1208px) {
     .img-rect {
         display: none;  
     }
@@ -76,17 +76,23 @@
 }
 
 .slow-text {
-    font-family: 'SlowBurnFont', sans-serif; /* Usa la fuente personalizada o una similar */
-    font-size: 2rem; /* Tamaño de texto similar al de la imagen */
+    font-family: 'SlowBurnFont', sans-serif; 
+    font-size: 2rem; 
     font-weight: bold;
-    color: #E15C56; /* Color de texto similar al de la imagen */
-    letter-spacing: 2px; /* Ajusta el espaciado entre letras si es necesario */
+    color: #E15C56; 
+    letter-spacing: 2px;
     position: relative;
-    white-space: nowrap;  /* Evita que el texto se rompa en varias líneas */
+    white-space: nowrap;  
 }
 
 @media screen and (max-width: 1200px) {
     .slow-text{
         font-size: medium;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .images-showcase {
+        display: none;  
     }
 }

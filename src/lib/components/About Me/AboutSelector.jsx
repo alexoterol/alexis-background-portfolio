@@ -167,7 +167,6 @@ function AboutSelector({ onNavigate }) {
                     </div>
                     <span className="app-name">Obsidian</span>
                 </div>
-
                 <div className="app-entry">
                     <div className="app-icon">
                         <img src="/src/lib/assets/images/applications/librewolf.webp" alt="LibreWolf" />
@@ -186,7 +185,7 @@ function AboutSelector({ onNavigate }) {
             <div className="inventory-grid">
                 <div className="inventory-item">
                     <div className="inventory-image">
-                        <img src="/src/lib/assets/images/inventory/mobile.webp" alt="Nothing a3" />
+                        <img src="/src/lib/assets/images/inventory/nothing_a3.webp" alt="Nothing a3" />
                     </div>
                     <span className="inventory-name">Nothing a3</span>
                 </div>
@@ -207,9 +206,9 @@ function AboutSelector({ onNavigate }) {
 
                 <div className="inventory-item">
                     <div className="inventory-image">
-                        <img src="/src/lib/assets/images/inventory/mp3.webp" alt="Fiio M3K" />
+                        <img src="/src/lib/assets/images/inventory/microphone_mv7+.png" alt="MV7+" />
                     </div>
-                    <span className="inventory-name">Fiio M3K</span>
+                    <span className="inventory-name">Shure MV7+</span>
                 </div>
             </div>
         </div>
@@ -219,35 +218,36 @@ function AboutSelector({ onNavigate }) {
         return (
           <div className="workspace-container">
             <h2 className="content-title">Workspace</h2>
+            
             <div className="workspace-display">
                 <div className="workspace-image">
-                    <img src="/src/lib/assets/images/workspace/workstation.png" alt="Mi workspace" />
+                    <img className="crop-img" src="/src/lib/assets/images/workspace/rog_strix_g16.webp" alt="Workspace" />
                 </div>
                 <Separator margin={false}/>
                 <div className="workspace-specs">
                     <div className="workspace-spec-item">
                         <span className="workspace-spec-label">Model :</span>
-                        <span className="workspace-spec-value">MacBook Pro</span>
+                        <span className="workspace-spec-value">Rog Strix G16</span>
                     </div>
                     <div className="workspace-spec-item">
                         <span className="workspace-spec-label">Chipset :</span>
-                        <span className="workspace-spec-value">M1 (2020)</span>
+                        <span className="workspace-spec-value">Intel Core i7</span>
                     </div>
                 </div>
             </div>
             <div className="workspace-display">
                 <div className="workspace-image">
-                    <img src="/src/lib/assets/images/workspace/workstation.png" alt="Mi workspace" />
+                    <img src="/src/lib/assets/images/workspace/laptop_hp.png" alt="Alt. Workspace" />
                 </div>
                 <Separator margin={false}/>
                 <div className="workspace-specs">
                     <div className="workspace-spec-item">
                         <span className="workspace-spec-label">Model :</span>
-                        <span className="workspace-spec-value">MacBook Pro</span>
+                        <span className="workspace-spec-value">HP 14-BS026la</span>
                     </div>
                     <div className="workspace-spec-item">
                         <span className="workspace-spec-label">Chipset :</span>
-                        <span className="workspace-spec-value">M1 (2020)</span>
+                        <span className="workspace-spec-value">Intel Core i5</span>
                     </div>
                 </div>
             </div>

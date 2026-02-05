@@ -1,0 +1,75 @@
+.contact-card-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: stretch;
+    gap: var(--padding-m, 1rem);
+    background: linear-gradient(var(--color-bg, #1a1a1a), var(--color-border, #333)) center no-repeat;
+    background-position: 0px 300px;
+    border: var(--border-width, 2px) solid var(--color-fg, #fff);
+    padding: var(--padding-m, 1rem);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-card-container:hover {
+    background-position: 0px 0px;
+    box-shadow: 0 0 10px 1px var(--color-border, #333);
+}
+
+.contact-card-container__img {
+    width: 3rem;
+    min-width: 3rem;
+}
+
+.contact-card-container__img img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+
+.contact-card-container__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.contact-card-container__text h2 {
+    font-family: var(--font-mono, 'Courier New', monospace);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-text, #fff);
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.contact-card-container__text h3 {
+    font-family: var(--font-mono, 'Courier New', monospace);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary, #aaa);
+    letter-spacing: 0.3px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.contact-card-container__star {
+    height: 3rem;
+    width: auto;
+    position: absolute;
+    right: -1.5rem;
+    top: -1.5rem;
+    display: none;
+}
+
+.contact-card-container:hover .contact-card-container__star {
+    display: block;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 728px) {
+    .contact-card-container {
+        width: 100%;
+    }
+}
