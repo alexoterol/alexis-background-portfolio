@@ -1,0 +1,118 @@
+{
+  "character": {
+    "name": "Alex",
+    "dialogues": [
+      "Bienvenido a mi espacio... espero que disfrutes el recorrido.",
+      "Este portafolio es una ventana a mi mundo profesional y creativo.",
+      "Me apasiona el desarrollo web y la resolución de problemas complejos.",
+      "Cada proyecto aquí representa horas de dedicación y aprendizaje.",
+      "¿Listo para explorar? Navega usando el menú lateral."
+    ]
+  },
+  "header": {
+    "title": "AlexisWEG"
+  },
+  "mainContent": {
+    "title": "El Trasfondo de Alexis",
+    "slowText": "ES UN TIPO DE A_____RTE LENTO"
+  },
+  "cards": {
+    "aboutMe": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "donate": "Donar :3",
+    "discord": "Discord",
+    "youtube": "Youtube"
+  },
+  "sidebar": {
+    "filesystem": "Sistema de Archivos",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "tools": "Herramientas",
+    "apps": "Aplicaciones",
+    "inventory": "Inventario",
+    "workspace": "Espacio de trabajo"
+  },
+  "aboutMe": {
+    "title": "Sobre mí",
+    "stats": {
+      "nick": "Nick",
+      "level": "Nivel",
+      "rank": "Rango"
+    },
+    "tabs": {
+      "presentation": "Presentación",
+      "tools": "Herramientas",
+      "apps": "Aplicaciones",
+      "inventory": "Inventario",
+      "workspace": "Espacio de trabajo"
+    },
+    "presentation": {
+      "title": "Presentación",
+      "text1": "¡Hola! Soy Alex, un ingeniero informático ecuatoriano de 20 años que ama jugar con cosas tecnológicas.",
+      "text2": "Experimentar con todo siempre ha sido algo que amo, desarmando todo lo que tengo en frente, instalando dispositivos electrónicos, o soldando componentes para crear cosas que me gustan.",
+      "text3": "Soy algo perezoso, pero me gusta trabajar en mis propios intereses. Amo lo que estoy estudiando."
+    },
+    "toolsSection": {
+      "title": "Herramientas",
+      "langs": "Lenguajes",
+      "frameworks": "Librerías / Frameworks",
+      "dbs": "Bases de Datos",
+      "tools": "Herramientas",
+      "humanLanguages": "Idiomas Humanos"
+    },
+    "appsSection": {
+      "title": "Aplicaciones"
+    },
+    "inventorySection": {
+      "title": "Inventario"
+    },
+    "workspaceSection": {
+      "title": "Espacio de trabajo",
+      "model": "Modelo",
+      "chipset": "Procesador"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "list": [
+      {
+        "name": "Rubiu5",
+        "description": "El bot de Discord para el ejército de Rubius"
+      },
+      {
+        "name": "Archan",
+        "description": "Un bot de Discord rápido y configurable"
+      },
+      {
+        "name": "StarMC",
+        "description": "Lanzador de Minecraft construido en Tauri"
+      },
+      {
+        "name": "DnD Abenyu",
+        "description": "Un servidor de ayuda para DnD construido en Rust"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "methods": [
+      {
+        "socialApp": "Correo",
+        "name": "Email",
+        "linkText": "AlexMail"
+      },
+      {
+        "socialApp": "Discord",
+        "name": "Discord",
+        "linkText": "Discock"
+      },
+      {
+        "socialApp": "Twitter",
+        "name": "Twitter",
+        "linkText": "Alex 🌱"
+      }
+    ]
+  }
+}

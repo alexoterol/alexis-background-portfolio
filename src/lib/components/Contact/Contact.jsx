@@ -2,26 +2,24 @@ import React from 'react';
 import './Contact.css';
 import Separator from '../Separator';
 import ContactCard from './ContactCard';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 function Contact() {
+    const { t } = useLanguage();
+    
+    const contactMethods = t('contact.methods');
+    
     const contacts = [
         {
-            socialApp: 'Mail',
-            name: 'Email',
-            linkText: 'AlexMail',
+            ...contactMethods[0],
             link: 'mailto:example@example.com'
         },
-
         {
-            socialApp: 'Discord',
-            name: 'Discord',
-            linkText: 'Discock',
+            ...contactMethods[1],
             link: 'https://discord.gg/...'
         },
         {
-            socialApp: 'Twitter',
-            name: 'Twitter',
-            linkText: 'Alex 🌱',
+            ...contactMethods[2],
             link: 'https://twitter.com/'
         }
     ];
@@ -30,7 +28,7 @@ function Contact() {
         <div className="app-container">
             <main className="about-me-content">
                 <div className="contact-container">
-                    <h1 className="main-title">Contact</h1>
+                    <h1 className="main-title">{t('contact.title')}</h1>
                     <Separator margin={true} />
                     
                     <div className="contact-methods-grid">

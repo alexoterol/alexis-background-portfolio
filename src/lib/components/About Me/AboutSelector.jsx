@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './AboutSelector.css';
 import Separator from '../Separator';
+import { useLanguage } from '../../contexts/LanguageContext';
 import presentationIcon from '../../assets/images/CardImages/aboutMe.svg';
 import toolsIcon from '../../assets/images/CardImages/aboutMe.svg';
 import appsIcon from '../../assets/images/CardImages/aboutMe.svg';
@@ -9,14 +10,15 @@ import inventoryIcon from '../../assets/images/CardImages/aboutMe.svg';
 import workspaceIcon from '../../assets/images/CardImages/aboutMe.svg';
 
 function AboutSelector({ onNavigate }) {
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState('presentation');
 
   const tabs = [
-    { id: 'presentation', icon: presentationIcon, label: 'Presentation' },
-    { id: 'tools', icon: toolsIcon, label: 'Tools' },
-    { id: 'apps', icon: appsIcon, label: 'Apps' },
-    { id: 'inventory', icon: inventoryIcon, label: 'Inventory' },
-    { id: 'workspace', icon: workspaceIcon, label: 'Workspace' },
+    { id: 'presentation', icon: presentationIcon, labelKey: 'aboutMe.tabs.presentation' },
+    { id: 'tools', icon: toolsIcon, labelKey: 'aboutMe.tabs.tools' },
+    { id: 'apps', icon: appsIcon, labelKey: 'aboutMe.tabs.apps' },
+    { id: 'inventory', icon: inventoryIcon, labelKey: 'aboutMe.tabs.inventory' },
+    { id: 'workspace', icon: workspaceIcon, labelKey: 'aboutMe.tabs.workspace' },
   ];
 
   const handleTabClick = (tabId) => {
@@ -28,20 +30,16 @@ function AboutSelector({ onNavigate }) {
       case 'presentation':
         return (
           <div className="tab-content presentation-content presentation-text">
-            <h2 className="content-title">Presentation</h2>
+            <h2 className="content-title">{t('aboutMe.presentation.title')}</h2>
             <div className="content-text">
               <p className='presentation-text'>
-                Jelou! I am Alex, an ecuadorean 20 year old computer
-                engineer that loves playing around with tech stuff.
+                {t('aboutMe.presentation.text1')}
               </p>
               <p className='presentation-text'>
-                Messing around with everything has always been something I love,
-                tearing down everything in front of me, installing electronic devices, 
-                or soldering components to create stuff I like.
+                {t('aboutMe.presentation.text2')}
               </p>
               <p className='presentation-text'>
-                I'm kind of lazy, but I do like to work on my own interests
-                I love what I'm studying.
+                {t('aboutMe.presentation.text3')}
               </p>
             </div>
           </div>
@@ -50,10 +48,10 @@ function AboutSelector({ onNavigate }) {
       case 'tools':
         return (
           <div className="tools-container">
-            <h2 className="content-title">Tools</h2>
+            <h2 className="content-title">{t('aboutMe.toolsSection.title')}</h2>
             
             <fieldset className="tools-section">
-                <legend>Langs</legend>
+                <legend>{t('aboutMe.toolsSection.langs')}</legend>
                 <div className="tool-entry">
                     <img src="/src/lib/assets/images/tools/python.webp" alt="Python" />
                 </div>
@@ -75,7 +73,7 @@ function AboutSelector({ onNavigate }) {
             </fieldset>
 
             <fieldset className="tools-section">
-                <legend>Libs / Frameworks</legend>
+                <legend>{t('aboutMe.toolsSection.frameworks')}</legend>
                 <div className="tool-entry">
                     <img src="/src/lib/assets/images/tools/react.png" alt="React" />
                 </div>
@@ -85,7 +83,7 @@ function AboutSelector({ onNavigate }) {
             </fieldset>
 
             <fieldset className="tools-section">
-                <legend>DBs</legend>
+                <legend>{t('aboutMe.toolsSection.dbs')}</legend>
                 <div className="tool-entry">
                     <img src="/src/lib/assets/images/tools/mysql.webp" alt="MySQL" />
                 </div>
@@ -101,7 +99,7 @@ function AboutSelector({ onNavigate }) {
             </fieldset>
 
             <fieldset className="tools-section">
-                <legend>Tools</legend>
+                <legend>{t('aboutMe.toolsSection.tools')}</legend>
                 <div className="tool-entry">
                     <img src="src/lib/assets/images/tools/git.webp" alt="Git" />
                 </div>
@@ -117,7 +115,7 @@ function AboutSelector({ onNavigate }) {
             </fieldset>
 
             <fieldset className="tools-section">
-                <legend>Human Languages</legend>
+                <legend>{t('aboutMe.toolsSection.humanLanguages')}</legend>
                 <div className="tool-entry">
                     <img src="src/lib/assets/images/tools/spain_flag.png" alt="Spanish" />
                 </div>
@@ -137,7 +135,7 @@ function AboutSelector({ onNavigate }) {
       case 'apps':
         return (
           <div className="apps-container">
-            <h2 className="content-title">Apps</h2>
+            <h2 className="content-title">{t('aboutMe.appsSection.title')}</h2>
             
             <div className="apps-grid">
                 <div className="app-entry">
@@ -180,7 +178,7 @@ function AboutSelector({ onNavigate }) {
       case 'inventory':
         return (
           <div className="inventory-container">
-            <h2 className="content-title">Inventory</h2>
+            <h2 className="content-title">{t('aboutMe.inventorySection.title')}</h2>
             
             <div className="inventory-grid">
                 <div className="inventory-item">
@@ -217,7 +215,7 @@ function AboutSelector({ onNavigate }) {
       case 'workspace':
         return (
           <div className="workspace-container">
-            <h2 className="content-title">Workspace</h2>
+            <h2 className="content-title">{t('aboutMe.workspaceSection.title')}</h2>
             
             <div className="workspace-display">
                 <div className="workspace-image">
@@ -226,11 +224,11 @@ function AboutSelector({ onNavigate }) {
                 <Separator margin={false}/>
                 <div className="workspace-specs">
                     <div className="workspace-spec-item">
-                        <span className="workspace-spec-label">Model :</span>
+                        <span className="workspace-spec-label">{t('aboutMe.workspaceSection.model')} :</span>
                         <span className="workspace-spec-value">Rog Strix G16</span>
                     </div>
                     <div className="workspace-spec-item">
-                        <span className="workspace-spec-label">Chipset :</span>
+                        <span className="workspace-spec-label">{t('aboutMe.workspaceSection.chipset')} :</span>
                         <span className="workspace-spec-value">Intel Core i7</span>
                     </div>
                 </div>
@@ -242,11 +240,11 @@ function AboutSelector({ onNavigate }) {
                 <Separator margin={false}/>
                 <div className="workspace-specs">
                     <div className="workspace-spec-item">
-                        <span className="workspace-spec-label">Model :</span>
+                        <span className="workspace-spec-label">{t('aboutMe.workspaceSection.model')} :</span>
                         <span className="workspace-spec-value">HP 14-BS026la</span>
                     </div>
                     <div className="workspace-spec-item">
-                        <span className="workspace-spec-label">Chipset :</span>
+                        <span className="workspace-spec-label">{t('aboutMe.workspaceSection.chipset')} :</span>
                         <span className="workspace-spec-value">Intel Core i5</span>
                     </div>
                 </div>
@@ -268,9 +266,9 @@ function AboutSelector({ onNavigate }) {
           key={tab.id}
           className={`tab-button ${activeTab === tab.id ? 'active' : ''}`}
           onClick={() => handleTabClick(tab.id)}
-          title={tab.label}
+          title={t(tab.labelKey)}
           >
-            <img src={tab.icon} alt={tab.label} className="tab-icon" />
+            <img src={tab.icon} alt={t(tab.labelKey)} className="tab-icon" />
           </button>
         ))}
 

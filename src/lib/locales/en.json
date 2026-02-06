@@ -1,0 +1,118 @@
+{
+  "character": {
+    "name": "Alex",
+    "dialogues": [
+      "Welcome to my space... I hope you enjoy the journey.",
+      "This portfolio is a window into my professional and creative world.",
+      "I'm passionate about web development and solving complex problems.",
+      "Each project here represents hours of dedication and learning.",
+      "Ready to explore? Navigate using the side menu."
+    ]
+  },
+  "header": {
+    "title": "AlexisWEG"
+  },
+  "mainContent": {
+    "title": "Alexis' Background",
+    "slowText": "IT IS A SL_________OW TYPE OF ART"
+  },
+  "cards": {
+    "aboutMe": "About Me",
+    "projects": "Projects",
+    "contact": "Contact",
+    "donate": "Donate :3",
+    "discord": "Discord",
+    "youtube": "Youtube"
+  },
+  "sidebar": {
+    "filesystem": "Filesystem",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "tools": "Tools",
+    "apps": "Apps",
+    "inventory": "Inventory",
+    "workspace": "Workspace"
+  },
+  "aboutMe": {
+    "title": "About me",
+    "stats": {
+      "nick": "Nick",
+      "level": "Level",
+      "rank": "Rank"
+    },
+    "tabs": {
+      "presentation": "Presentation",
+      "tools": "Tools",
+      "apps": "Apps",
+      "inventory": "Inventory",
+      "workspace": "Workspace"
+    },
+    "presentation": {
+      "title": "Presentation",
+      "text1": "Jelou! I am Alex, an ecuadorean 20 year old computer engineer that loves playing around with tech stuff.",
+      "text2": "Messing around with everything has always been something I love, tearing down everything in front of me, installing electronic devices, or soldering components to create stuff I like.",
+      "text3": "I'm kind of lazy, but I do like to work on my own interests. I love what I'm studying."
+    },
+    "toolsSection": {
+      "title": "Tools",
+      "langs": "Langs",
+      "frameworks": "Libs / Frameworks",
+      "dbs": "DBs",
+      "tools": "Tools",
+      "humanLanguages": "Human Languages"
+    },
+    "appsSection": {
+      "title": "Apps"
+    },
+    "inventorySection": {
+      "title": "Inventory"
+    },
+    "workspaceSection": {
+      "title": "Workspace",
+      "model": "Model",
+      "chipset": "Chipset"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "list": [
+      {
+        "name": "Rubiu5",
+        "description": "The discord bot for Rubius Army"
+      },
+      {
+        "name": "Archan",
+        "description": "A fast and configurable discord bot"
+      },
+      {
+        "name": "StarMC",
+        "description": "Minecraft launcher built on Tauri"
+      },
+      {
+        "name": "DnD Abenyu",
+        "description": "A DnD helper server built in Rust"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "methods": [
+      {
+        "socialApp": "Mail",
+        "name": "Email",
+        "linkText": "AlexMail"
+      },
+      {
+        "socialApp": "Discord",
+        "name": "Discord",
+        "linkText": "Discock"
+      },
+      {
+        "socialApp": "Twitter",
+        "name": "Twitter",
+        "linkText": "Alex 🌱"
+      }
+    ]
+  }
+}

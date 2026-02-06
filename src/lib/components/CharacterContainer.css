@@ -9,6 +9,18 @@
     border: 2px solid var(--color-fg, #fff);
     border-radius: 8px;
     margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.character-dialog-container:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: var(--color-primary, #00ff00);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.character-dialog-container:active {
+    transform: translateY(0);
 }
 
 .character-image-wrapper {
@@ -50,6 +62,22 @@
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-right: 10px solid var(--color-fg, #fff);
+}
+
+.dialog-box::after {
+    content: '▼ Click';
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 0.7rem;
+    color: var(--color-fg, #fff);
+    opacity: 0.6;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
 }
 
 .characterName, .dialog-text{

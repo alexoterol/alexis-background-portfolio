@@ -6,6 +6,7 @@ import AboutMe from './lib/components/About Me/AboutMe';
 import Projects from './lib/components/Project/Projects';
 import Contact from './lib/components/Contact/Contact';
 import Sidebar from './lib/components/Sidebar';
+import { LanguageProvider } from './lib/contexts/LanguageContext';
 
 
 function App() {
@@ -27,12 +28,12 @@ function App() {
   };
 
   return (
-    <>
+    <LanguageProvider>
       <img src="./src/lib/assets/images/frame.png" className='frame' alt="" />
       <Header />
       <Sidebar currentView={currentView} onNavigate={setCurrentView} />
       {renderView()}
-    </>
+    </LanguageProvider>
   );
 }
 

@@ -5,11 +5,14 @@ import SpaceAesthetic from './SpaceAesthetic';
 import Separator from './Separator';
 import CharacterContainer from './CharacterContainer';
 import CardContainer from './CardContainer';
+import { useLanguage } from '../contexts/LanguageContext';
 
 import imgCuadrada from '../assets/images/ref_square.jpg';
 import imgRectangular from '../assets/images/ref_rectangle.jpg';
 
 function MainContent({ onNavigate }) {
+    const { t } = useLanguage();
+    
     const imageNames = [
         'GOW_logo.png',
         'Akira_logo.png',
@@ -21,7 +24,7 @@ function MainContent({ onNavigate }) {
     return (
             <div className="app-container">
                 <main className="main-content">
-                    <h1 className="main-title">Alexis' Background</h1>
+                    <h1 className="main-title">{t('mainContent.title')}</h1>
                     <Separator margin={true} />
                     <div className="content-grid">
                         <div className="images-showcase">
@@ -37,7 +40,7 @@ function MainContent({ onNavigate }) {
                         </div>
                     </div>
                     <div className='slow-separator'>
-                        <p className='slow-text'>IT IS A SL_________OW TYPE OF ART</p>
+                        <p className='slow-text'>{t('mainContent.slowText')}</p>
                     </div>
                     <CardContainer onNavigate={onNavigate} />
                 </main>

@@ -1,38 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 import './Header.css';
 import CoplandOsImg from '../assets/images/copland.webp';
 import AlexisFaceImg from '../assets/images/alexiswegcara.webp';
+import { useLanguage } from '../contexts/LanguageContext';
 
 function Header() {
-  const [userLocale, setUserLocale] = useState('en');
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const savedLocale = localStorage.getItem('locale');
     if (savedLocale) {
-      setUserLocale(savedLocale);
-    } else {
-      const locale = getLocale();
-      setUserLocale(locale);
+      setLanguage(savedLocale);
     }
   }, []);
-
-  useEffect(() => {
-    updateLocale();
-  }, [userLocale]);
-
-  function getLocale() {
-    const userLocale = navigator.language?.substring(0, 2);
-    if (!(userLocale === 'en' || userLocale === 'es')) {
-      return 'en';
-    }
-    return userLocale || 'en';
-  }
-
-  function updateLocale() {
-    const strippedLocale = userLocale.substring(0, 2);
-    localStorage.setItem('locale', strippedLocale);
-  }
 
   return (
     <>
@@ -60,8 +41,8 @@ function Header() {
           <select
             name="lang"
             className="lang-selector"
-            value={userLocale}
-            onChange={(e) => setUserLocale(e.target.value)}
+            value={language}
+            onChange={(e) => setLanguage(e.target.value)}
           >
             <option value="en">en</option>
             <option value="es">es</option>
