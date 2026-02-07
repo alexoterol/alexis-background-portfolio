@@ -1,0 +1,130 @@
+.game-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: rgba(255, 255, 255, 0.03);
+    border-left: 6px solid var(--tier-color, #888);
+    padding: var(--padding-l, 1rem) var(--padding-m, 1rem);
+    
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.game-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.game-item__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--padding-m, 1rem);
+}
+
+.game-item__icon {
+    width: 4rem;
+    height: 4rem;
+    min-width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.game-item__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-item__name {
+    font-family: var(--font-mono, 'Courier New', monospace);
+    font-size: 1.50rem;
+    font-weight: normal;
+    color: var(--color-text, #fff);
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.game-item__tier {
+    font-family: var(--font-mono, 'Courier New', monospace);
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-text-secondary, #aaa);
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.game-item:hover .game-item__tier {
+    color: var(--tier-color, #fff);
+}
+
+/* Tier Colors */
+.game-item.tier-s {
+    --tier-color: #ff6b6b;
+}
+
+.game-item.tier-a {
+    --tier-color: #ffd93d;
+}
+
+.game-item.tier-b {
+    --tier-color: #6bcf7f;
+}
+
+.game-item.tier-c {
+    --tier-color: #4ecdc4;
+}
+
+.game-item.tier-d {
+    --tier-color: #95a3b3;
+}
+
+.game-item.tier-f {
+    --tier-color: #777;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 728px) {
+    .game-item__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        min-width: 2.5rem;
+    }
+    
+    .game-item__name {
+        font-size: 0.9rem;
+    }
+    
+    .game-item__tier {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game-item {
+        padding: var(--padding-xs, 0.4rem) var(--padding-s, 0.75rem);
+    }
+    
+    .game-item__content {
+        gap: var(--padding-s, 0.75rem);
+    }
+    
+    .game-item__icon {
+        width: 2rem;
+        height: 2rem;
+        min-width: 2rem;
+    }
+    
+    .game-item__name {
+        font-size: 0.85rem;
+    }
+    
+    .game-item__tier {
+        font-size: 0.75rem;
+    }
+}

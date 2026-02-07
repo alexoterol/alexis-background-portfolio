@@ -29,10 +29,8 @@
     "about": "About",
     "projects": "Projects",
     "contact": "Contact",
-    "tools": "Tools",
-    "apps": "Apps",
-    "inventory": "Inventory",
-    "workspace": "Workspace"
+    "games": "Games",
+    "music": "Music"
   },
   "aboutMe": {
     "title": "About me",

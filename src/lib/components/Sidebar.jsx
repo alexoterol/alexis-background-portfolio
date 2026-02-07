@@ -95,7 +95,7 @@ function Sidebar({ onNavigate }) {
                 <a 
                     className="sidebar-link" 
                     href="/tools"
-                    onClick={(e) => handleLinkClick(e, 'tools')}
+                    onClick={(e) => handleLinkClick(e, 'games')}
                 >
                     <svg
                         className="sidebar-link-icon"
@@ -106,13 +106,13 @@ function Sidebar({ onNavigate }) {
                             d="M15.45 1.38l-.8-.8c-.73-.73-1.92-.73-2.65 0L10.38 2.2 13.8 5.62l1.65-1.62c.73-.73.73-1.92 0-2.65zM1 11.48l-.75 4.27 4.27-.75L14.25 5.27 10.73 1.75 1 11.48z"
                         />
                     </svg>
-                    <p>{t('sidebar.tools')}</p>
+                    <p>{t('sidebar.games')}</p>
                 </a>
 
                 <a 
                     className="sidebar-link" 
                     href="/apps"
-                    onClick={(e) => handleLinkClick(e, 'apps')}
+                    onClick={(e) => handleLinkClick(e, 'music')}
                 >
                     <svg
                         className="sidebar-link-icon"
@@ -123,41 +123,7 @@ function Sidebar({ onNavigate }) {
                             d="M0 0h7v7H0V0zm9 0h7v7H9V0zM0 9h7v7H0V9zm9 0h7v7H9V9z"
                         />
                     </svg>
-                    <p>{t('sidebar.apps')}</p>
-                </a>
-
-                <a 
-                    className="sidebar-link" 
-                    href="/inventory"
-                    onClick={(e) => handleLinkClick(e, 'inventory')}
-                >
-                    <svg
-                        className="sidebar-link-icon"
-                        viewBox="0 0 16 16"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M2 2h4v4H2V2zm6 0h4v4H8V2zm6 0h4v4h-4V2zM2 8h4v4H2V8zm6 0h4v4H8V8zm6 0h4v4h-4V8zM2 14h4v2H2v-2zm6 0h4v2H8v-2zm6 0h4v2h-4v-2z"
-                        />
-                    </svg>
-                    <p>{t('sidebar.inventory')}</p>
-                </a>
-
-                <a 
-                    className="sidebar-link" 
-                    href="/workspace"
-                    onClick={(e) => handleLinkClick(e, 'workspace')}
-                >
-                    <svg
-                        className="sidebar-link-icon"
-                        viewBox="0 0 16 16"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M1 1h14v9H1V1zm0 11h14v3H1v-3z"
-                        />
-                    </svg>
-                    <p>{t('sidebar.workspace')}</p>
+                    <p>{t('sidebar.music')}</p>
                 </a>
             </article>
         </div>

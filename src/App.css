@@ -27,8 +27,15 @@
     --header-height: 4rem;
     --sidebar-width: 10rem;
 
-    --border-width: 0.15rem;
-    
+    --border-width: 0.15rem;     
+}
+
+@font-face {
+  font-family: 'mono-font';
+  src: url('mi-fuente.woff2') format('woff2'),
+       url('mi-fuente.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Estilos globales */
@@ -66,4 +73,82 @@ body {
     pointer-events: none;
     transition: 0s;
     z-index: 999999999;
+}
+
+a:hover {
+    text-decoration-color: var(--color-accent);
+}
+
+.title {
+    font-family: var(--mono-font);
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    text-align: center;
+    position: relative;
+}
+
+.subtitle {
+	    font-family: "Chicago 12";
+}
+
+.no-deco {
+    text-decoration: none;
+}
+
+/* BUTTONS */
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+select {
+    background-color: transparent;
+    border: none;
+    font-family: "departure-mono";
+}
+
+/* RESPONSIVENESS */
+.desktop-only {
+    display: unset !important;
+}
+.mobile-only {
+    display: none !important;
+}
+
+@media screen and (max-width: 980px) {
+    :root {
+        --padding-main-x: 4rem;
+    }
+}
+
+@media screen and (max-width: 728px) {
+	:root {
+        --padding-main-x: 2rem;
+        --padding-main-y: 2rem;
+    }
+
+    .desktop-only {
+        display: none !important;
+    }
+    .mobile-only {
+        display: unset !important;
+    }
+
+    p {
+        font-size: medium;
+    }
+}
+
+/* FONTS */
+@font-face {
+    font-family: "departure-mono";
+    src: url("./lib/assets/fonts/departure_mono/DepartureMono-Regular.otf");
+}
+@font-face {
+    font-family: "Chicago 12";
+    src: url("./lib/assets/fonts/Chicago-12.ttf");
+}
+@font-face {
+    font-family: "vergilia";
+    src: url("./lib/assets/fonts/vergilia/vergilia.ttf");
 }

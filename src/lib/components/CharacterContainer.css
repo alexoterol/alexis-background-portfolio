@@ -14,7 +14,7 @@
 
 .character-dialog-container:hover {
     background-color: rgba(0, 0, 0, 0.8);
-    border-color: var(--color-primary, #00ff00);
+    border-color: var(--color-accent);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }

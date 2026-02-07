@@ -1,0 +1,55 @@
+.window-container {
+    width: 100%;
+    border: 2px solid var(--color-accent, #c77dff);
+    background-color: var(--color-bg, #1a1a1a);
+    overflow: hidden;
+}
+
+.window-titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-accent, #c77dff);
+    padding: var(--padding-xs, 0.3rem) var(--padding-s, 0.5rem);
+}
+
+.window-titlebar__title {
+    font-family: var(--font-mono, 'Courier New', monospace);
+    font-size: 0.9rem;
+    color: var(--color-bg, #1a1a1a);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.window-titlebar__controls {
+    display: flex;
+    gap: var(--padding-xs, 0.3rem);
+}
+
+.window-control {
+    font-family: var(--font-mono, 'Courier New', monospace);
+    font-size: 1rem;
+    color: var(--color-bg, #1a1a1a);
+    cursor: pointer;
+    padding: 0 var(--padding-xs, 0.3rem);
+    transition: opacity 0.3s ease;
+}
+
+.window-control:hover {
+    opacity: 0.7;
+}
+
+.window-content {
+    padding: var(--padding-m, 1rem);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 728px) {
+    .window-titlebar__title {
+        font-size: 0.8rem;
+    }
+    
+    .window-control {
+        font-size: 0.9rem;
+    }
+}

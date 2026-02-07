@@ -6,6 +6,8 @@ import AboutMe from './lib/components/About Me/AboutMe';
 import Projects from './lib/components/Project/Projects';
 import Contact from './lib/components/Contact/Contact';
 import Sidebar from './lib/components/Sidebar';
+import Music from './lib/components/Music/Music';
+import Games from './lib/components/Games/Games'
 import { LanguageProvider } from './lib/contexts/LanguageContext';
 
 
@@ -20,8 +22,12 @@ function App() {
         return <AboutMe onNavigate={setCurrentView} />;
       case 'projects':
         return <Projects onNavigate={setCurrentView} />
-        case 'contact':
+      case 'contact':
         return <Contact onNavigate={setCurrentView} />
+      case 'games':
+        return <Games onNavigate={setCurrentView} />
+      case 'music':
+        return <Music onNavigate={setCurrentView} />
       default:
         return <MainContent onNavigate={setCurrentView} />;
     }
