@@ -9,22 +9,22 @@ import lprCover from '../../assets/images/music/copland.webp';
 function Music() {
     const playlists = [
         {
-            name: "Alex",
-            description: "Alex's playlist",
+            name: "Yes?",
+            description: "Gangsta shyt",
             cover: lprCover,
-            spotifyUrl: "https://open.spotify.com/playlist/your-playlist-id-1"
+            spotifyUrl: "https://open.spotify.com/playlist/1PkvnLUzAnpR1qKm8wloeZ?si=21a40f83d1c642aa"
         },
         {
-            name: "Lfdsag",
+            name: "PoliRawr",
+            description: "Several languages to offer",
+            cover: lprCover,
+            spotifyUrl: "https://open.spotify.com/playlist/3A3nRML3rGZpBKn6SBiW86?si=26bacd7709df4971"
+        },
+        {
+            name: "Sad,_,",
             description: null,
             cover: lprCover,
-            spotifyUrl: "https://open.spotify.com/playlist/your-playlist-id-2"
-        },
-        {
-            name: "MCHN",
-            description: "RPlrs playlist",
-            cover: lprCover,
-            spotifyUrl: "https://open.spotify.com/playlist/your-playlist-id-3"
+            spotifyUrl: "https://open.spotify.com/playlist/0rzUnb8Hw0nNB47KIas6tr?si=b9c2109112d34a25"
         }
     ];
 

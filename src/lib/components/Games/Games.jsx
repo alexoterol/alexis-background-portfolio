@@ -28,25 +28,13 @@ import SkyrimImg from '../../assets/images/games/skyrim.webp';
 function Games() {
     const games = [
         // Tier S
-        { name: "Oneshot", img: OneshotImg, tier: "s" },
-        { name: "Outer Wilds", img: OuterWildsImg, tier: "s" },
-        { name: "A Hat In Time", img: AHatInTimeImg, tier: "s" },
-        { name: "Yakuza 0", img: Yakuza0Img, tier: "s" },
-        { name: "Persona 4 Golden", img: Persona4Golden, tier: "s" },
-        { name: "Cult of the Lamb", img: CultOfTheLamb, tier: "s" },
-        { name: "Klonoa", img: KlonoaImg, tier: "s" },
         { name: "Dark Souls", img: DarkSoulsImg, tier: "s" },
         { name: "Portal 2", img: Portal2Img, tier: "s" },
         { name: "RDR 2", img: RDR2Img, tier: "s" },
         { name: "GTA SA", img: GTASAImg, tier: "s" },
-        { name: "Diablo", img: DiabloImg, tier: "s" },
-        { name: "Metaphor: ReFantazio", img: MetaphorImg, tier: "s" },
         { name: "Minecraft", img: MinecraftImg, tier: "s" },
         
         // Tier A
-        { name: "Persona 5 Royal", img: Persona5RoyalImg, tier: "a" },
-        { name: "Pokemon Black", img: PokemonBlackImg, tier: "a" },
-        { name: "GTA IV", img: GTAIVImg, tier: "a" },
         { name: "CSGO", img: CSGOImg, tier: "a" },
         { name: "Portal", img: PortalImg, tier: "a" },
         

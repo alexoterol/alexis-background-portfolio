@@ -76,20 +76,20 @@
     "title": "Proyectos",
     "list": [
       {
-        "name": "Rubiu5",
-        "description": "El bot de Discord para el ejército de Rubius"
+        "name": "ABC",
+        "description": "El bot de ABC"
       },
       {
-        "name": "Archan",
-        "description": "Un bot de Discord rápido y configurable"
+        "name": "CDR",
+        "description": "Un bot de DSFA"
       },
       {
-        "name": "StarMC",
-        "description": "Lanzador de Minecraft construido en Tauri"
+        "name": "OLA",
+        "description": "BB"
       },
       {
-        "name": "DnD Abenyu",
-        "description": "Un servidor de ayuda para DnD construido en Rust"
+        "name": "YYT",
+        "description": "RST"
       }
     ]
   },

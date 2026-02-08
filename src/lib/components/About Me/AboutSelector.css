@@ -51,7 +51,8 @@
 .tab-icon {
     max-height: 2rem;
     display: inline-block;
-    filter: grayscale(100%);
+    filter: brightness(100%) invert(100%);
+
     transition: filter 0.3s ease;
 }
 

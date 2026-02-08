@@ -9,6 +9,7 @@ import Sidebar from './lib/components/Sidebar';
 import Music from './lib/components/Music/Music';
 import Games from './lib/components/Games/Games'
 import { LanguageProvider } from './lib/contexts/LanguageContext';
+import frame from './lib/assets/images/frame.png';
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
 
   return (
     <LanguageProvider>
-      <img src="src/lib/assets/images/frame.png" className='frame' alt="" />
+      <img src={frame} className='frame' alt="" />
       <Header />
       <Sidebar currentView={currentView} onNavigate={setCurrentView} />
       {renderView()}
