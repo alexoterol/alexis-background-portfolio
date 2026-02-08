@@ -23,10 +23,7 @@
 }
 
 @media (max-width: 480px) {
-    .contact-container .main-title {
-        font-size: 1.2rem;
-    }
-    
+
     .contact-methods-grid {
         gap: var(--padding-m, 1rem);
     }

@@ -33,10 +33,10 @@ function MainContent({ onNavigate }) {
                         </div>
 
                         <div className="bottom-section">
-                            <SpaceAesthetic imageNames={imageNames} />
                             <div className="interaction-area">
                                 <CharacterContainer />
                             </div>
+                            <SpaceAesthetic imageNames={imageNames} />
                         </div>
                     </div>
                     <div className='slow-separator'>

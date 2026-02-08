@@ -591,10 +591,6 @@
         font-size: 0.65rem;
     }
 
-    .main-title {
-        font-size: 1.5rem;
-    }
-
     .interaction-area-about-me {
         padding: var(--padding-m, 1rem);
         max-height: 500px;

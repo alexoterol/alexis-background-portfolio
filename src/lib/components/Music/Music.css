@@ -41,10 +41,6 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .music-container .main-title {
-        font-size: 1.2rem;
-    }
-    
     .playlist-info h3 {
         font-size: 0.9rem;
     }

@@ -35,7 +35,7 @@ function App() {
 
   return (
     <LanguageProvider>
-      <img src="./src/lib/assets/images/frame.png" className='frame' alt="" />
+      <img src="src/lib/assets/images/frame.png" className='frame' alt="" />
       <Header />
       <Sidebar currentView={currentView} onNavigate={setCurrentView} />
       {renderView()}
